@@ -1,0 +1,118 @@
+
+body{
+    background-color: rgb(7, 7, 83);
+}
+
+.navLogo a{
+    display: inline-block;
+    width: 150px;
+}
+.navLogo a img{
+    width: 100%;
+}
+
+.movieCard{
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+.movieImg{
+    height: 100%;
+}
+.movieCard .movieImg img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.movieName h4{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ratingSection{
+    background-color: rgb(5, 5, 42);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.overviewSection{
+    background-color: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 125%;
+    height: 70%;
+    transition: all .4s ease-in-out;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.movieCard:hover .overviewSection,
+.movieCard:active .overviewSection,
+.movieCard:focus .overviewSection{
+    top: 30%;
+}
+
+.backDrop{
+    background-color: rgba(0 , 0, 0, 0.7);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    animation: backDrop .4s ease-in-out;
+}
+.movieModel{
+    position: fixed;
+    width: 60%;
+    left: 20%;
+    top: 15%;
+    display: none;
+    animation: movieModel .4s ease-in-out;
+}
+.movieModel i:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.backDrop.active, .movieModel.active{
+    display: block;
+}
+
+@keyframes backDrop {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes movieModel {
+    from{
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+.action{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
